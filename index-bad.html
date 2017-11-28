@@ -65,8 +65,10 @@
     </div>
 
     <div class="navbar navbar-toggleable-md navbar-light">
-      <nav role="navigation" class="container btn-annot-outline">
+      <nav role="navigation" class="container btn-annot-outline" aria-labelledby="main-nav">
         <button type="button" class="btn btn-annot" data-toggle="modal" data-target="#annotModal04">04</button>
+
+          <div id="main-nav" class="sr-only">Main navigation</div>
         
         <a href="index.html" class="navbar-brand">
           <img class="avatar-img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1182308/a11y-logo.png" alt="Logo Accessibility">
@@ -79,36 +81,38 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
           <div class="mr-auto">
-            <div class="navbar-nav">
+            <ul class="navbar-nav">
               <div class="nav-item active">
                 <button type="button" class="btn btn-annot" data-toggle="modal" data-target="#annotModal06">06</button>
                 <a class="nav-link btn-annot-outline" href="index.html" id="main-menu">Home</a>
-                <div class="pagination pagination-navbar">
-                  <div class="page-item"><a class="page-link" href="index.html">Good</a></div>
-                  <div class="page-item"><a class="page-link active" href="index-bad.html">Bad</a></div>
-                </div>                
+                <ul class="pagination pagination-navbar">
+                  <li class="page-item"><a class="page-link" href="index.html">Good</a></li>
+                  <li class="page-item"><a class="page-link active" href="index-bad.html">Bad</a></li>
+                </ul>
               </div>
-              <div class="nav-item">
+              <li class="nav-item">
                 <a class="nav-link" href="article.html">Article</a>
-              </div>
-              <div class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="media.html">Media</a>
-              </div>
-              <div class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="request.html">Request</a>
-              </div>
-              <div class="nav-item">
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="table.html">Tables</a>
-              </div>
-            </div>
+              </li>
+            </ul>
           </div>
 
           <nav role="search" class="form-inline my-2 my-lg-0 btn-annot-outline">
             <button type="button" class="btn btn-annot" data-toggle="modal" data-target="#annotModal04">04</button>
-            <input class="form-control form-control-search mr-2 btn-annot-outline" type="text" placeholder="Type term...">
+            <label for="search-field">Search</label>
+            <input class="form-control form-control-search mr-2 btn-annot-outline" id="search-field" type="text" placeholder="Type term...">
             <button type="button" class="btn btn-annot btn-annot-search" data-toggle="modal" data-target="#annotModal07">07</button>
             <button class="btn btn-tertiary search-button my-2 my-sm-0 ml-0 p-1" type="submit">
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1182308/icon-search.png">
+              <span class="icon" aria-hidden="true"></span>
+              <span class="sr-only">Search</span>
             </button>
           </nav>
 
@@ -669,7 +673,7 @@ Everyone kept saying "No comprendo nada de lo que dices."</p>
                 <li>No relationship between and status for menu present</li>
                 <li>No text alternative present for functional icon</li>
                 <li>Menu not marked up with a list and no nested relationsship present</li>
-                <li>No indication of current / active link</span>
+                <li>No indication of current / active link</li>
               </ul>
 
               <div class="alert alert-info">
